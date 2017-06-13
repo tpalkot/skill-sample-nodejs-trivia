@@ -5,751 +5,148 @@ module.exports = {
      * When editing your questions pay attention to your punctuation. Make sure you use question marks or periods.
      * Make sure the first answer is the correct one. Set at least ANSWER_COUNT answers, any extras will be shuffled in.
      */
-    "QUESTIONS_EN_GB" : [
-        {
-            "Reindeer have very thick coats, how many hairs per square inch do they have?": [
-                "13,000",
-                "1,200",
-                "5,000",
-                "700",
-                "1,000",
-                "120,000"
-            ]
-        },
-        {
-            "The 1964 classic Rudolph The Red Nosed Reindeer was filmed in. ": [
-                "Japan",
-                "United States",
-                "Finland",
-                "Germany",
-                "Canada",
-                "Norway",
-                "France"
-            ]
-        },
-        {
-            "Santas reindeer are cared for by one of the Christmas elves, what is his name?": [
-                "Wunorse Openslae",
-                "Alabaster Snowball",
-                "Bushy Evergreen",
-                "Pepper Minstix"
-            ]
-        },
-        {
-            "If all of Santas reindeer had antlers while pulling his Christmas sleigh, they would all be. ": [
-                "Girls",
-                "Boys",
-                "Girls and boys",
-                "No way to tell"
-            ]
-        },
-        {
-            "What do Reindeer eat?": [
-                "Lichen",
-                "Grasses",
-                "Leaves",
-                "Berries"
-            ]
-        },
-        {
-            "What of the following is not true?": [
-                "Caribou live on all continents",
-                "Both reindeer and Caribou are the same species",
-                "Caribou are bigger than reindeer",
-                "Reindeer live in Scandinavia and Russia"
-            ]
-        },
-        {
-            "In what year did Rudolph make his television debut?": [
-                "1964",
-                "1979",
-                "2000",
-                "1956"
-            ]
-        },
-        {
-            "Who was the voice of Rudolph in the 1964 classic?": [
-                "Billie Mae Richards",
-                "Burl Ives",
-                "Paul Soles",
-                "Lady Gaga"
-            ]
-        },
-        {
-            "In 1939 what retailer used the story of Rudolph the Red Nose Reindeer?": [
-                "Montgomery Ward",
-                "Sears",
-                "Macys",
-                "Kmart"
-            ]
-        },
-        {
-            "Santa\'s reindeer named Donner was originally named what?": [
-                "Dunder",
-                "Donny",
-                "Dweedle",
-                "Dreamy"
-            ]
-        },
-        {
-            "Who invented the story of Rudolph?": [
-                "Robert May",
-                "Johnny Marks",
-                "Santa",
-                "J.K. Rowling"
-            ]
-        },
-        {
-            "In what location will you not find reindeer?": [
-                "North Pole",
-                "Lapland",
-                "Korvatunturi mountain",
-                "Finland"
-            ]
-        },
-        {
-            "What Makes Santa\'s Reindeer Fly?": [
-                "Magical Reindeer Dust",
-                "Fusion",
-                "Amanita muscaria",
-                "Elves"
-            ]
-        },
-        {
-            "Including Rudolph, how many reindeer hooves are there?": [
-                "36",
-                "24",
-                "16",
-                "8"
-            ]
-        },
-        {
-            "Santa only has one female reindeer. Which one is it?": [
-                "Vixen",
-                "Clarice",
-                "Cupid",
-                "Cupid"
-            ]
-        },
-        {
-            "In the 1964 classic Rudolph The Red Nosed Reindeer, what was the snowman narrators name?": [
-                "Sam",
-                "Frosty",
-                "Burl",
-                "Snowy"
-            ]
-        },
-        {
-            "What was Rudolph\'s father\'s name?": [
-                "Donner",
-                "Dasher",
-                "Blixen",
-                "Comet"
-            ]
-        },
-        {
-            "In the 1964 movie, What was the name of the coach of the Reindeer Games?": [
-                "Comet",
-                "Blixen",
-                "Donner",
-                "Dasher"
-            ]
-        },
-        {
-            "In the 1964 movie, what is the name of the deer that Rudolph befriends at the reindeer games?": [
-                "Fireball",
-                "Clarice",
-                "Jumper",
-                "Vixen"
-            ]
-        },
-        {
-            "In the 1964 movie, How did Donner, Rudolph\'s father, try to hide Rudolph\'s nose?": [
-                "Black mud",
-                "Bag",
-                "Pillow case",
-                "Sock"
-            ]
-        },
-        {
-            "In the 1964 movie, what does the Misfit Elf want to be instead of a Santa Elf?": [
-                "Dentist",
-                "Reindeer",
-                "Toy maker",
-                "Candlestick maker"
-            ]
-        },
-        {
-            "In the 1964 movie,what was the Bumble\'s one weakness?": [
-                "Could not swim",
-                "Always hungry",
-                "Candy canes",
-                "Cross eyed"
-            ]
-        },
-        {
-            "In the 1964 movie, what is Yukon Cornelius really in search of?": [
-                "Peppermint",
-                "Gold",
-                "India",
-                "Polar Bears"
-            ]
-        },
-        {
-            "In the 1964 movie, why is the train on the Island of Misfit Toys?": [
-                "Square wheels",
-                "No Engine",
-                "Paint does not match",
-                "It does not toot"
-            ]
-        },
-        {
-            "In the 1964 movie, what is the name of the Jack in the Box?": [
-                "Charlie",
-                "Sam",
-                "Billy",
-                "Jack"
-            ]
-        },
-        {
-            "In the 1964 movie, why did Santa Claus almost cancel Christmas?": [
-                "Storm",
-                "No snow",
-                "No toys",
-                "The Reindeer were sick"
-            ]
-        },
-        {
-            "In the 1964 movie, what animal noise did the elf make to distract the Bumble?": [
-                "Oink",
-                "Growl",
-                "Bark",
-                "Meow"
-            ]
-        },
-        {
-            "In the 1964 movie, what is the name of the prospector?": [
-                "Yukon Cornelius",
-                "Slider Sam",
-                "Bumble",
-                "Jack"
-            ]
-        },
-        {
-            "How far do reindeer travel when they migrate?": [
-                "3000 miles",
-                "700 miles",
-                "500 miles",
-                "0 miles"
-            ]
-        },
-        {
-            "How fast can a reindeer run?": [
-                "48 miles per hour",
-                "17 miles per hour",
-                "19 miles per hour",
-                "14 miles per hour",
-                "52 miles per hour",
-                "41 miles per hour"
-            ]
-        }
-    ],
     "QUESTIONS_EN_US" : [
         {
-            "Reindeer have very thick coats, how many hairs per square inch do they have?": [
-                "13,000",
-                "1,200",
-                "5,000",
-                "700",
-                "1,000",
-                "120,000"
-            ]
+            "question":"Suppose over the next 10 years the prices of the things you buy double. If your income also doubles, will you be able to buy:", 
+            "answers":[
+                "the same as you can buy today",
+                "less than you can buy today", 
+                "more than you can buy today",
+                "nothing"
+            ],
+            "explanation":"If prices double, you need double the income to buy the same things"
         },
         {
-            "The 1964 classic Rudolph The Red Nosed Reindeer was filmed in. ": [
-                "Japan",
-                "United States",
-                "Finland",
-                "Germany",
-                "Canada",
-                "Norway",
-                "France"
-            ]
+            "question":"Suppose you need to borrow 100 US dollars. Which is the lower amount to pay back:", 
+            "answers": [
+                "100 US dollars plus three percent",
+                "105 US dollars",
+                "100 US dollars plus nine percent",
+                "110 US dollars"
+                
+            ],
+            "explanation":"Three percent of 100 is $3, for a total of $103"
         },
         {
-            "Santas reindeer are cared for by one of the Christmas elves, what is his name?": [
-                "Wunorse Openslae",
-                "Alabaster Snowball",
-                "Bushy Evergreen",
-                "Pepper Minstix"
-            ]
+            "question":"Which debt should you pay down first?", 
+            "answers": [
+                "The debt with the highest interest rate",
+                "The largest debt",
+                "The debt you have held for the longest",
+                "You should not pay down debt"
+                
+            ],
+            "explanation":"Higher interest rates cost you more"
         },
         {
-            "If all of Santas reindeer had antlers while pulling his Christmas sleigh, they would all be": [
-                "Girls",
-                "Boys",
-                "Girls and boys",
-                "No way to tell"
-            ]
+            "question":"Over the lifetime of the loan, a $200,000 loan at 5% for 30 years will cost", 
+            "answers": [
+                "386511",
+                "200000",
+                "200150",
+                "Its impossible to calculate"
+            ],
+            "explanation":"Interest compounded adds up"
         },
         {
-            "What do Reindeer eat?": [
-                "Lichen",
-                "Grasses",
-                "Leaves",
-                "Berries"
-            ]
+            "question":"When interest rates go up, they cause bond prices to", 
+            "answers": [
+                "decrease in value",
+                "increase in value",
+                "not change",
+                "interest rates and bond prices are unrelated"
+            ],
+            "explanation":"Bond prices decrease when interest rates increase because the fixed interest and principal payments stated in the bond will become less attractive to investors."
         },
         {
-            "What of the following is not true?": [
-                "Caribou live on all continents",
-                "Both reindeer and Caribou are the same species",
-                "Caribou are bigger than reindeer",
-                "Reindeer live in Scandinavia and Russia"
-            ]
+            "question":"Which of the following has the highest historical rate of return", 
+            "answers": [
+                "stocks",
+                "bonds",
+                "certificates of deposit",
+                "gold"
+            ],
+            "explanation":"Between 1802 and 2012 stocks returned 8.1%, bonds 5.1%, and gold 2.1%"
         },
         {
-            "In what year did Rudolph make his television debut?": [
-                "1964",
-                "1979",
-                "2000",
-                "1956"
-            ]
+            "question":"Which state has no income tax?", 
+            "answers": [
+                "Texas",
+                "California",
+                "New York",
+                "Washington"
+            ],
+            "explanation":"Texas has no income tax, but taxes residents in other ways"
         },
         {
-            "Who was the voice of Rudolph in the 1964 classic?": [
-                "Billie Mae Richards",
-                "Burl Ives",
-                "Paul Soles",
-                "Lady Gaga"
-            ]
+            "question":"What is considered a safe withdrawal rate for your nest egg to make it last forever", 
+            "answers": [
+                "4%",
+                "20%",
+                "8%",
+                "Its impossible"
+            ],
+            "explanation":"Studies of historical data have shown this amount to be safe."
         },
         {
-            "In 1939 what retailer used the story of Rudolph the Red Nose Reindeer?": [
-                "Montgomery Ward",
-                "Sears",
-                "Macys",
-                "Kmart"
-            ]
+            "question":"Select the best student loan option", 
+            "answers": [
+                "Subsidized",
+                "Collateralized",
+                "Uncollateralized",                
+                "Unsubsidized"
+            ],
+            "explanation":"With a subsidized loan the goverment pays your loan interest while you are in school"
         },
         {
-            "Santa\'s reindeer named Donner was originally named what?": [
-                "Dunder",
-                "Donny",
-                "Dweedle",
-                "Dreamy"
-            ]
+            "question":"Which loan term is best if you want to reduce the total amount you will repay over the life of the loan?", 
+            "answers": [
+                "3 years",
+                "5 years",
+                "10 years",
+                "20 years"
+            ],
+            "explanation":"Given the same interest rate, the fewer years you have to pay interest the less you pay"
         },
         {
-            "Who invented the story of Rudolph?": [
-                "Robert May",
-                "Johnny Marks",
-                "Santa",
-                "J.K. Rowling"
-            ]
+            "question":"Which loan term is best if you want to reduce monthly payment amount?", 
+            "answers": [
+                "3 years",
+                "5 years",
+                "10 years",
+                "20 years"
+            ],
+            "explanation":"A longer loan term generally gives a lower interest rate"
         },
         {
-            "In what location will you not find reindeer?": [
-                "North Pole",
-                "Lapland",
-                "Korvatunturi mountain",
-                "Finland"
-            ]
+            "question":"Imagine that the interest rate on your savings account is 1 percent a year and inflation is 2 percent a year. After one year, would the money in the account buy", 
+            "answers": [
+                "less",
+                "same",
+                "more",
+                "impossible to know"
+            ],
+            "explanation":"Growth of 1% is lower than the cost increase of 2%"
         },
         {
-            "What Makes Santa\'s Reindeer Fly?": [
-                "Magical Reindeer Dust",
-                "Fusion",
-                "Amanita muscaria",
-                "Elves"
-            ]
+            "question":"An IRA retirement ladder is", 
+            "answers": [
+                "A way to access retirement funds before retirement age",
+                "A suggestion to save more each year",
+                "Not available to most investors",
+                "An alternative to a 401k"
+            ],
+            "explanation":"This technique leverages the roth IRA to get money early"
         },
         {
-            "Including Rudolph, how many reindeer hooves are there?": [
-                "36",
-                "24",
-                "16",
-                "8"
-            ]
-        },
-        {
-            "Santa only has one female reindeer. Which one is it?": [
-                "Vixen",
-                "Clarice",
-                "Cupid",
-                "Cupid"
-            ]
-        },
-        {
-            "In the 1964 classic Rudolph The Red Nosed Reindeer, what was the snowman narrators name?": [
-                "Sam",
-                "Frosty",
-                "Burl",
-                "Snowy"
-            ]
-        },
-        {
-            "What was Rudolph\'s father\'s name?": [
-                "Donner",
-                "Dasher",
-                "Blixen",
-                "Comet"
-            ]
-        },
-        {
-            "In the 1964 movie, What was the name of the coach of the Reindeer Games?": [
-                "Comet",
-                "Blixen",
-                "Donner",
-                "Dasher"
-            ]
-        },
-        {
-            "In the 1964 movie, what is the name of the deer that Rudolph befriends at the reindeer games?": [
-                "Fireball",
-                "Clarice",
-                "Jumper",
-                "Vixen"
-            ]
-        },
-        {
-            "In the 1964 movie, How did Donner, Rudolph\'s father, try to hide Rudolph\'s nose?": [
-                "Black mud",
-                "Bag",
-                "Pillow case",
-                "Sock"
-            ]
-        },
-        {
-            "In the 1964 movie, what does the Misfit Elf want to be instead of a Santa Elf?": [
-                "Dentist",
-                "Reindeer",
-                "Toy maker",
-                "Candlestick maker"
-            ]
-        },
-        {
-            "In the 1964 movie,what was the Bumble\'s one weakness?": [
-                "Could not swim",
-                "Always hungry",
-                "Candy canes",
-                "Cross eyed"
-            ]
-        },
-        {
-            "In the 1964 movie, what is Yukon Cornelius really in search of?": [
-                "Peppermint",
-                "Gold",
-                "India",
-                "Polar Bears"
-            ]
-        },
-        {
-            "In the 1964 movie, why is the train on the Island of Misfit Toys?": [
-                "Square wheels",
-                "No Engine",
-                "Paint does not match",
-                "It does not toot"
-            ]
-        },
-        {
-            "In the 1964 movie, what is the name of the Jack in the Box?": [
-                "Charlie",
-                "Sam",
-                "Billy",
-                "Jack"
-            ]
-        },
-        {
-            "In the 1964 movie, why did Santa Claus almost cancel Christmas?": [
-                "Storm",
-                "No snow",
-                "No toys",
-                "The Reindeer were sick"
-            ]
-        },
-        {
-            "In the 1964 movie, what animal noise did the elf make to distract the Bumble?": [
-                "Oink",
-                "Growl",
-                "Bark",
-                "Meow"
-            ]
-        },
-        {
-            "In the 1964 movie, what is the name of the prospector?": [
-                "Yukon Cornelius",
-                "Slider Sam",
-                "Bumble",
-                "Jack"
-            ]
-        },
-        {
-            "How far do reindeer travel when they migrate?": [
-                "3000 miles",
-                "700 miles",
-                "500 miles",
-                "0 miles"
-            ]
-        },
-        {
-            "How fast can a reindeer run?": [
-                "48 miles per hour",
-                "17 miles per hour",
-                "19 miles per hour",
-                "14 miles per hour",
-                "52 miles per hour",
-                "41 miles per hour"
-            ]
-        }
-    ],
-    "QUESTIONS_DE_DE" : [
-        {
-            "Rentiere haben ein sehr dickes Fell. Wie viele Haare pro Quadratzentimeter haben sie?": [
-                "13,000",
-                "1,200",
-                "5,000",
-                "700",
-                "1,000",
-                "120,000"
-            ]
-        },
-        {
-            "Der Klassiker aus dem Jahr 1964, Rudolph mit der roten Nase, wurde gedreht in. ": [
-                "Japan",
-                "USA",
-                "Finnland",
-                "Deutschland",
-                "Kanada",
-                "Norwegen",
-                "Frankreich"
-            ]
-        },
-        {
-            "Um die Rentiere des Weihnachtsmanns kümmert sich eine der Weihnachtselfen. Wie heißt sie?": [
-                "Wunorse Openslae",
-                "Alabaster Snowball",
-                "Bushy Evergreen",
-                "Pfeffer Minstix"
-            ]
-        },
-        {
-            "Wenn alle Rentiere des Weihnachtsmanns Geweihe hätten, während sie seinen Weihnachtsschlitten ziehen, wären sie alle. ": [
-                "Weiblich",
-                "Männlich",
-                "Weiblich und männlich",
-                "Kann man nicht sagen"
-            ]
-        },
-        {
-            "Was essen Rentiere?": [
-                "Flechten",
-                "Gras",
-                "Blätter",
-                "Beeren"
-            ]
-        },
-        {
-            "Welche Aussage ist nicht richtig?": [
-                "Karibus leben auf allen Kontinenten",
-                "Karibus und Rentiere gehören derselben Gattung an ",
-                "Karibus sind größer als Rentiere",
-                "Rentiere leben in Skandinavien und Russland"
-            ]
-        },
-        {
-            "In welchem Jahr kam Rudolph ins Fernsehen?": [
-                "1964",
-                "1979",
-                "2000",
-                "1956"
-            ]
-        },
-        {
-            "Wer war der Sprecher für Rudolph im klassischen Film aus dem Jahr 1964?": [
-                "Billie Mae Richards",
-                "Burl Ives",
-                "Paul Soles",
-                "Lady Gaga"
-            ]
-        },
-        {
-            "Welche Handelskette verwendete 1939 die Geschichte von Rudolph mit der roten Nase?": [
-                "Montgomery Ward",
-                "Sears",
-                "Macys",
-                "Kmart"
-            ]
-        },
-        {
-            "Wie hieß das Rentier des Weihnachtsmanns namens Donner ursprünglich?": [
-                "Dunder",
-                "Donny",
-                "Dweedle",
-                "Dreamy"
-            ]
-        },
-        {
-            "Wer hat die Geschichte von Rudolph erfunden?": [
-                "Robert May",
-                "Johnny Marks",
-                "Santa",
-                "J.K. Rowling"
-            ]
-        },
-        {
-            "Wo findest du keine Rentiere?": [
-                "Nordpol",
-                "Lappland",
-                "Korvatunturi-Berge",
-                "Finnland"
-            ]
-        },
-        {
-            "Warum können die Rentiere des Weihnachtsmanns fliegen?": [
-                "Magischer Staub der Rentiere",
-                "Fusion",
-                "Amanita muscaria",
-                "Elfen"
-            ]
-        },
-        {
-            "Wieviele Rentierhufe gibt es hier einschließlich Rudolph?": [
-                "36",
-                "24",
-                "16",
-                "8"
-            ]
-        },
-        {
-            "Der Weihnachtsmann hat nur ein weibliches Rentier. Wie heißt es?": [
-                "Blitzen",
-                "Clarice",
-                "Cupid",
-                "Cupid"
-            ]
-        },
-        {
-            "Wie war der Name des erzählenden Schneemanns im klassischen Film Rudolph mit der roten Nase aus dem Jahr 1964?": [
-                "Sam",
-                "Frosty",
-                "Burl",
-                "Snowy"
-            ]
-        },
-        {
-            "Wie hieß der Vater von Rudolph?": [
-                "Donner",
-                "Dasher",
-                "Blixen",
-                "Comet"
-            ]
-        },
-        {
-            "Wie war der Name des Trainers der Rentierspiele im klassischen Film aus dem Jahr 1964?": [
-                "Comet",
-                "Blixen",
-                "Donner",
-                "Dasher"
-            ]
-        },
-        {
-            "Wie war im klassichen Film aus 1964 der Name des Hirsches, mit dem sich Rudolph befreundete?": [
-                "Fireball",
-                "Clarice",
-                "Jumper",
-                "Vixen"
-            ]
-        },
-        {
-            "Wie hat der Vater von Rudolph, Donner, im Film aus dem Jahr 1964 versucht, die Nase von Rudolph zu verbergen?": [
-                "Schwarzer Schlamm",
-                "Sack",
-                "Kissenbezug",
-                "Socke"
-            ]
-        },
-        {
-            "Was möchte die Misfit-Elfe im Film aus dem Jahr 1964 werden anstatt eine Elfe für den Weihnachtsmann?": [
-                "Zahnarzt",
-                "Rentier",
-                "Spielzeugmacher",
-                "Kerzenmacher"
-            ]
-        },
-        {
-            "Was war die einzige Schwäche von Bumble im Film aus dem Jahr 1964?": [
-                "Konnte nicht schwimmen",
-                "War immer hungrig",
-                "Zuckerstangen",
-                "Schielte"
-            ]
-        },
-        {
-            "Was sucht Yukon Cornelius in Wirklichkeit im Film aus dem Jahr 1964?": [
-                "Pfefferminz",
-                "Gold",
-                "Indien",
-                "Polarbären"
-            ]
-        },
-        {
-            "Warum befindet sich der Zug im Film aus dem Jahr 1964 auf der Insel des fehlerhaften Spielzeugs?": [
-                "Viereckige Räder",
-                "Keine Dampfmaschine",
-                "Farbe stimmt nicht",
-                "Pfeift nicht"
-            ]
-        },
-        {
-            "Wie lautet der Name des Schachtelmännchens im Film aus dem Jahr 1964?": [
-                "Charlie",
-                "Sam",
-                "Billy",
-                "Jack"
-            ]
-        },
-        {
-            "Warum hat der Weihnachtsmann im Film aus dem Jahr 1964 Weihnachten beinahe abgesagt?": [
-                "Sturm",
-                "Kein Schnee",
-                "Kein Spielzeug",
-                "Die Rentiere waren krank"
-            ]
-        },
-        {
-            "Welches tierische Geräusch machte die Elfe im Film aus dem Jahr 1964, um den Bumble abzulenken?": [
-                "Oink",
-                "Knurr",
-                "Wauwau",
-                "Miau"
-            ]
-        },
-        {
-            "Wie lautet der Name des Goldsuchers im Film aus dem Jahr 1964?": [
-                "Yukon Cornelius",
-                "Slider Sam",
-                "Bumble",
-                "Jack"
-            ]
-        },
-        {
-            "Wie weit ziehen Rentiere auf ihren Wanderungen?": [
-                "4800 km",
-                "1100 km",
-                "800 km",
-                "0 km"
-            ]
-        },
-        {
-            "Wie schnell läuft ein Rentier?": [
-                "77 km pro Stunde",
-                "27 km pro Stunde",
-                "30 km pro Stunde",
-                "22 km pro Stunde",
-                "83 km pro Stunde",
-                "65 km pro Stunde"
-            ]
+            "question":"How much would 2% investment fee lower your returns", 
+            "answers": [
+                "40%",
+                "2%",
+                "4%",
+                "20%"
+            ],
+            "explanation":"Imagine you have $100,000 invested. If the account earned 6% a year for the next 25 years and had no costs or fees, you would end up with about $430,000. If, on the other hand, you paid 2% a year in costs, after 25 years you'd only have about $260,000."
         }
     ]
 };

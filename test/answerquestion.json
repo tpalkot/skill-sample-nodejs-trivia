@@ -1,0 +1,40 @@
+{
+  "session": {
+    "sessionId": "SessionId.a9bb2f1c-f7d0-4dca-aee9-005ad5f35f37",
+    "application": {
+      "applicationId": "amzn1.ask.skill.55de74e3-d33f-46d0-93a8-15eea8db2adb"
+    },
+    "attributes": {
+      "score": 0,
+      "currentQuestionIndex": 0,
+      "correctAnswerExplanation": "explain1",
+      "speechOutput": "Question 1. Santas reindeer are cared for by one of the Christmas elves, what is his name? 1. Bushy Evergreen. 2. Wunorse Openslae. 3. Pepper Minstix. 4. Alabaster Snowball. ",
+      "correctAnswerText": "Wunorse Openslae",
+      "repromptText": "Question 1. Santas reindeer are cared for by one of the Christmas elves, what is his name? 1. Bushy Evergreen. 2. Wunorse Openslae. 3. Pepper Minstix. 4. Alabaster Snowball. ",
+      "questions": [
+        2,
+        0,
+        7,
+        10,
+        9
+      ],
+      "STATE": "_TRIVIAMODE",
+      "correctAnswerIndex": 2
+    },
+    "user": {
+      "userId": "amzn1.ask.account.AFAVPDFFAVEX4XSGTQ2DJEFQQIQ6OXKLFF6XL6MR2GOLYF4EEUAZPBDKD4OPC5JYXR2PT2UYQBDQ5TDUHSWVBNSENH67524RC47B7MWVBK5ZZRYZI65TLNYMP3DKVGEJ4OXSBA2MEAMACBOD2KYWKMXFBVX2VHWS524WEJJPZIJQGGWREY6YB3YWOCL2SH4TLV3NQM5WJUXV5LY"
+    },
+    "new": false
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.9d658c06-681f-4c11-8aed-c8f51456900f",
+    "locale": "en-US",
+    "timestamp": "2017-06-12T23:39:09Z",
+    "intent": {
+      "name": "DontKnowIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}

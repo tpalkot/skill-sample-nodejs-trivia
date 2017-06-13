@@ -17,8 +17,8 @@ var questions = require("./questions");
 var languageString = {
     "en": {
         "translation": {
-            "QUESTIONS" : questions["QUESTIONS_EN_US"],
-            "GAME_NAME" : "Reindeer Trivia", // Be sure to change this for your skill.
+            "QUESTIONS" : questions["QUESTIONS_EN_US"],       
+            "GAME_NAME" : "finance trivia", // Be sure to change this for your skill.
             "HELP_MESSAGE": "I will ask you %s multiple choice questions. Respond with the number of the answer. " +
             "For example, say one, two, three, or four. To start a new game at any time, say, start game. ",
             "REPEAT_QUESTION_MESSAGE": "To repeat the last question, say, repeat. ",
@@ -34,51 +34,12 @@ var languageString = {
             "WELCOME_MESSAGE": "I will ask you %s questions, try to get as many right as you can. " +
             "Just say the number of the answer. Let\'s begin. ",
             "ANSWER_CORRECT_MESSAGE": "correct. ",
-            "ANSWER_WRONG_MESSAGE": "wrong. ",
-            "CORRECT_ANSWER_MESSAGE": "The correct answer is %s: %s. ",
+            "ANSWER_WRONG_MESSAGE": "wrong. ",       
+            "CORRECT_ANSWER_MESSAGE": "The correct answer is %s: %s. %s. ",
             "ANSWER_IS_MESSAGE": "That answer is ",
             "TELL_QUESTION_MESSAGE": "Question %s. %s ",
             "GAME_OVER_MESSAGE": "You got %s out of %s questions correct. Thank you for playing!",
             "SCORE_IS_MESSAGE": "Your score is %s. "
-        }
-    },
-    "en-US": {
-        "translation": {
-            "QUESTIONS" : questions["QUESTIONS_EN_US"],
-            "GAME_NAME" : "American Reindeer Trivia" // Be sure to change this for your skill.
-        }
-    },
-    "en-GB": {
-        "translation": {
-            "QUESTIONS" : questions["QUESTIONS_EN_GB"],
-            "GAME_NAME" : "British Reindeer Trivia" // Be sure to change this for your skill.
-        }
-    },
-    "de": {
-        "translation": {
-            "QUESTIONS" : questions["QUESTIONS_DE_DE"],
-            "GAME_NAME" : "Wissenswertes über Rentiere in Deutsch", // Be sure to change this for your skill.
-            "HELP_MESSAGE": "Ich stelle dir %s Multiple-Choice-Fragen. Antworte mit der Zahl, die zur richtigen Antwort gehört. " +
-            "Sage beispielsweise eins, zwei, drei oder vier. Du kannst jederzeit ein neues Spiel beginnen, sage einfach „Spiel starten“. ",
-            "REPEAT_QUESTION_MESSAGE": "Wenn die letzte Frage wiederholt werden soll, sage „Wiederholen“ ",
-            "ASK_MESSAGE_START": "Möchten Sie beginnen?",
-            "HELP_REPROMPT": "Wenn du eine Frage beantworten willst, antworte mit der Zahl, die zur richtigen Antwort gehört. ",
-            "STOP_MESSAGE": "Möchtest du weiterspielen?",
-            "CANCEL_MESSAGE": "OK, dann lass uns bald mal wieder spielen.",
-            "NO_MESSAGE": "OK, spielen wir ein andermal. Auf Wiedersehen!",
-            "TRIVIA_UNHANDLED": "Sagt eine Zahl beispielsweise zwischen 1 und %s",
-            "HELP_UNHANDLED": "Sage ja, um fortzufahren, oder nein, um das Spiel zu beenden.",
-            "START_UNHANDLED": "Du kannst jederzeit ein neues Spiel beginnen, sage einfach „Spiel starten“.",
-            "NEW_GAME_MESSAGE": "Willkommen bei %s. ",
-            "WELCOME_MESSAGE": "Ich stelle dir %s Fragen und du versuchst, so viele wie möglich richtig zu beantworten. " +
-            "Sage einfach die Zahl, die zur richtigen Antwort passt. Fangen wir an. ",
-            "ANSWER_CORRECT_MESSAGE": "Richtig. ",
-            "ANSWER_WRONG_MESSAGE": "Falsch. ",
-            "CORRECT_ANSWER_MESSAGE": "Die richtige Antwort ist %s: %s. ",
-            "ANSWER_IS_MESSAGE": "Diese Antwort ist ",
-            "TELL_QUESTION_MESSAGE": "Frage %s. %s ",
-            "GAME_OVER_MESSAGE": "Du hast %s von %s richtig beantwortet. Danke fürs Mitspielen!",
-            "SCORE_IS_MESSAGE": "Dein Ergebnis ist %s. "
         }
     }
 };
@@ -125,7 +86,7 @@ var startStateHandlers = Alexa.CreateStateHandler(GAME_STATES.START, {
         // Select and shuffle the answers for each question
         var roundAnswers = populateRoundAnswers(gameQuestions, 0, correctAnswerIndex, translatedQuestions);
         var currentQuestionIndex = 0;
-        var spokenQuestion = Object.keys(translatedQuestions[gameQuestions[currentQuestionIndex]])[0];
+        var spokenQuestion = translatedQuestions[gameQuestions[currentQuestionIndex]].question;
         var repromptText = this.t("TELL_QUESTION_MESSAGE", "1", spokenQuestion);
 
         for (var i = 0; i < ANSWER_COUNT; i++) {
@@ -134,6 +95,7 @@ var startStateHandlers = Alexa.CreateStateHandler(GAME_STATES.START, {
 
         speechOutput += repromptText;
 
+		
         Object.assign(this.attributes, {
             "speechOutput": repromptText,
             "repromptText": repromptText,
@@ -141,7 +103,8 @@ var startStateHandlers = Alexa.CreateStateHandler(GAME_STATES.START, {
             "correctAnswerIndex": correctAnswerIndex + 1,
             "questions": gameQuestions,
             "score": 0,
-            "correctAnswerText": translatedQuestions[gameQuestions[currentQuestionIndex]][Object.keys(translatedQuestions[gameQuestions[currentQuestionIndex]])[0]][0]
+            "correctAnswerText": translatedQuestions[gameQuestions[currentQuestionIndex]].answers[0]
+            ,"correctAnswerExplanation":translatedQuestions[gameQuestions[currentQuestionIndex]].explanation
         });
 
         // Set the current state to trivia mode. The skill will now use handlers defined in triviaStateHandlers
@@ -242,7 +205,10 @@ function handleUserGuess(userGaveUp) {
     var currentScore = parseInt(this.attributes.score);
     var currentQuestionIndex = parseInt(this.attributes.currentQuestionIndex);
     var correctAnswerText = this.attributes.correctAnswerText;
+    var correctAnswerExplanation = this.attributes.correctAnswerExplanation;
+
     var translatedQuestions = this.t("QUESTIONS");
+    var translatedExplanations = this.t("EXPLANATIONS");
 
     if (answerSlotValid && parseInt(this.event.request.intent.slots.Answer.value) == this.attributes["correctAnswerIndex"]) {
         currentScore++;
@@ -252,7 +218,7 @@ function handleUserGuess(userGaveUp) {
             speechOutputAnalysis = this.t("ANSWER_WRONG_MESSAGE");
         }
 
-        speechOutputAnalysis += this.t("CORRECT_ANSWER_MESSAGE", correctAnswerIndex, correctAnswerText);
+        speechOutputAnalysis += this.t("CORRECT_ANSWER_MESSAGE", correctAnswerIndex, correctAnswerText, correctAnswerExplanation);
     }
 
     // Check if we can exit the game session after GAME_LENGTH questions (zero-indexed)
@@ -264,7 +230,7 @@ function handleUserGuess(userGaveUp) {
     } else {
         currentQuestionIndex += 1;
         correctAnswerIndex = Math.floor(Math.random() * (ANSWER_COUNT));
-        var spokenQuestion = Object.keys(translatedQuestions[gameQuestions[currentQuestionIndex]])[0];
+        var spokenQuestion = translatedQuestions[gameQuestions[currentQuestionIndex]].question;
         var roundAnswers = populateRoundAnswers.call(this, gameQuestions, currentQuestionIndex, correctAnswerIndex, translatedQuestions);
         var questionIndexForSpeech = currentQuestionIndex + 1;
         var repromptText = this.t("TELL_QUESTION_MESSAGE", questionIndexForSpeech.toString(), spokenQuestion);
@@ -283,7 +249,8 @@ function handleUserGuess(userGaveUp) {
             "correctAnswerIndex": correctAnswerIndex + 1,
             "questions": gameQuestions,
             "score": currentScore,
-            "correctAnswerText": translatedQuestions[gameQuestions[currentQuestionIndex]][Object.keys(translatedQuestions[gameQuestions[currentQuestionIndex]])[0]][0]
+            "correctAnswerText": translatedQuestions[gameQuestions[currentQuestionIndex]].answers[0]
+            ,"correctAnswerExplanation":translatedQuestions[gameQuestions[currentQuestionIndex]].explanation
         });
 
         this.emit(":askWithCard", speechOutput, repromptText, this.t("GAME_NAME"), repromptText);
@@ -324,14 +291,14 @@ function populateGameQuestions(translatedQuestions) {
  * */
 function populateRoundAnswers(gameQuestionIndexes, correctAnswerIndex, correctAnswerTargetLocation, translatedQuestions) {
     var answers = [];
-    var answersCopy = translatedQuestions[gameQuestionIndexes[correctAnswerIndex]][Object.keys(translatedQuestions[gameQuestionIndexes[correctAnswerIndex]])[0]].slice();
+    var answersCopy = translatedQuestions[gameQuestionIndexes[correctAnswerIndex]].answers.slice();
     var index = answersCopy.length;
 
     if (index < ANSWER_COUNT) {
         throw new Error("Not enough answers for question.");
     }
-
     // Shuffle the answers, excluding the first element which is the correct answer.
+    
     for (var j = 1; j < answersCopy.length; j++){
         var rand = Math.floor(Math.random() * (index - 1)) + 1;
         index -= 1;
@@ -340,7 +307,7 @@ function populateRoundAnswers(gameQuestionIndexes, correctAnswerIndex, correctAn
         answersCopy[index] = answersCopy[rand];
         answersCopy[rand] = temp;
     }
-
+	
     // Swap the correct answer into the target location
     for (var i = 0; i < ANSWER_COUNT; i++) {
         answers[i] = answersCopy[i];
