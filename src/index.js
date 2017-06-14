@@ -18,7 +18,7 @@ var languageString = {
     "en": {
         "translation": {
             "QUESTIONS" : questions["QUESTIONS_EN_US"],       
-            "GAME_NAME" : "finance trivia", // Be sure to change this for your skill.
+            "GAME_NAME" : "boy band quiz", // Be sure to change this for your skill.
             "HELP_MESSAGE": "I will ask you %s multiple choice questions. Respond with the number of the answer. " +
             "For example, say one, two, three, or four. To start a new game at any time, say, start game. ",
             "REPEAT_QUESTION_MESSAGE": "To repeat the last question, say, repeat. ",
@@ -33,7 +33,7 @@ var languageString = {
             "NEW_GAME_MESSAGE": "Welcome to %s. ",
             "WELCOME_MESSAGE": "I will ask you %s questions, try to get as many right as you can. " +
             "Just say the number of the answer. Let\'s begin. ",
-            "ANSWER_CORRECT_MESSAGE": "correct. ",
+            "ANSWER_CORRECT_MESSAGE": "correct. %s. ",
             "ANSWER_WRONG_MESSAGE": "wrong. ",       
             "CORRECT_ANSWER_MESSAGE": "The correct answer is %s: %s. %s. ",
             "ANSWER_IS_MESSAGE": "That answer is ",
@@ -212,7 +212,7 @@ function handleUserGuess(userGaveUp) {
 
     if (answerSlotValid && parseInt(this.event.request.intent.slots.Answer.value) == this.attributes["correctAnswerIndex"]) {
         currentScore++;
-        speechOutputAnalysis = this.t("ANSWER_CORRECT_MESSAGE");
+        speechOutputAnalysis = this.t("ANSWER_CORRECT_MESSAGE",correctAnswerExplanation);
     } else {
         if (!userGaveUp) {
             speechOutputAnalysis = this.t("ANSWER_WRONG_MESSAGE");
